@@ -121,7 +121,7 @@ sess.run(f,feed_dict=replace_dict)
 writer=tf.summary.FileWriter('./hw2',graph=graph)
 
 
-# ![TensorBoard](./hw2/HW2_TensorBoard.png)
+# ![TensorBoard](HW2_TensorBoard.png)
 
 # In[17]:
 
