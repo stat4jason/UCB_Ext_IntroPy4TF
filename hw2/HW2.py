@@ -18,6 +18,9 @@ import random
 random.seed(2018)
 
 
+# ### 1.  Placeholder for an input array with dtype float32 and shape None
+# ### 2.  Scopes for the input, middle section and final node f
+
 # In[3]:
 
 
@@ -32,7 +35,7 @@ with graph.as_default():
     #Scope for the input section 
     with tf.name_scope(name='Input_placeholder'):
         #1.  Placeholder for an input array with dtype float32 and shape None
-        a = tf.placeholder(shape=[None], dtype=tf.float32, name='input_a')
+        a = tf.placeholder(shape=None, dtype=tf.float32, name='input_a')
         
     #Scope for the middle section 
     with tf.name_scope(name='Middle_section'):
@@ -47,6 +50,8 @@ with graph.as_default():
         
         f = tf.multiply(x=e,y=d,name='mul_f')
 
+
+# ### 3.  Feed the placeholder with an array A consisting of 100 normally distributed random numbers with Mean = 1 and Standard devia=on = 2
 
 # In[5]:
 
@@ -75,30 +80,64 @@ sess=tf.Session(graph=graph)
 # In[9]:
 
 
-sess.run(f,feed_dict=replace_dict)
+sess.run(a,feed_dict=replace_dict)
 
 
 # In[10]:
 
 
-writer=tf.summary.FileWriter('./hw2',graph=graph)
+sess.run(b,feed_dict=replace_dict)
 
-
-# ![TensorBoard](HW2_TensorBoard.png)
 
 # In[11]:
 
 
-writer.close()
+sess.run(c,feed_dict=replace_dict)
 
 
 # In[12]:
 
 
-sess.close()
+sess.run(d,feed_dict=replace_dict)
+
+
+# In[13]:
+
+
+sess.run(e,feed_dict=replace_dict)
+
+
+# In[14]:
+
+
+sess.run(f,feed_dict=replace_dict)
+
+
+# ### 4.  Save your graph and show it in TensorBoard
+
+# In[16]:
+
+
+writer=tf.summary.FileWriter('./hw2',graph=graph)
+
+
+# ![TensorBoard](./hw2/HW2_TensorBoard.png)
+
+# In[17]:
+
+
+writer.close()
 
 
 # In[18]:
+
+
+sess.close()
+
+
+# ### 5.  Plot you input array on a separate figure
+
+# In[19]:
 
 
 # histogram of the input array
