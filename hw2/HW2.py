@@ -152,3 +152,19 @@ plt.axis([-5, 7, 0, 0.25])
 plt.grid(True)
 plt.show()
 
+
+# In[22]:
+
+
+with tf.Session(graph=tf.Graph()) as sess1:
+    with tf.name_scope(name='Input_placeholder'):
+    #1.  Placeholder for an input array with dtype float32 and shape None
+        a = tf.placeholder(shape=None, dtype=tf.float32, name='input_a')
+        sess1.run(a,feed_dict={a:input_array})
+sess1.graph.as_graph_def()
+writer1=tf.summary.FileWriter('./hw2',graph=sess1.graph)
+writer1.close()
+sess1.close()
+
+
+# ![TensorBoard1](input_placeholder.png)
