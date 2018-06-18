@@ -1,0 +1,41 @@
+Project Members-
+
+Introduction to TensorFlow using Python
+Shiwen (Gigi) Wang: jingjingwsw@gmail.com
+Zhicheng (Jason) Xue: emailxjason@gmail.com
+
+
+Data source-
+https://www.kaggle.com/wendykan/lending-club-loan-data/data
+
+Dataset Description-
+LendingClub is the world’s largest peer-to-peer lending company, 
+and it was the first peer-to-peer lender to register its offerings as securities with the Securities and Exchange Commission. 
+The dataset includes information on all loans issued from 2007 to 2015. 
+The data consists of information on the lenders (“ability-to-pay” metrics such as credit score, 
+length of employment, finance inquiries) as well as the loans themselves 
+(loan status, loan amount, loan term, interest rate). 
+The dataset includes ~890,000 observations and 75 variables. 
+
+Why we chose this project-
+We chose this project because the correlations between lending habits and loan characteristics is an interesting topic. 
+For instance, do people default on their loans because they take out too much, because they come from lower-income backgrounds, 
+or both? Do we see different lending habits in different geographical regions? These are questions we wish to explore.
+Furthermore, the predictive aspect of this project is powerful. 
+We can help LendingClub identify potential risky borrowers and make corresponding adjustment on payment schedule, 
+loan pricing and capital reserve strategy. 
+
+Goals (what we want to solve) & Project Plan (how we intend to solve it)- 
+Our goal is to build predictive models by using TensorFlow. 
+We will use LendingClub’s latest loan payment information, 
+credit bureau information and other demographic information to 
+predict whether a borrower will make an on-time loan payment. 
+The outcome or target variable is a binary discrete variable with 1 represent any 
+type of late payment/collection and 0 represent on-time payment or paid off. 
+This is a binary classification supervised learning problem. 
+Our plan is to fit logistic regression (regular machine learning technique) 
+and CNN/RNN (deep learning algorithm) to compare the accuracy of the models. 
+
+Final deliverable-
+The outcome will be data exploration, visualization, and statistical analysis using pandas/matplotlib, 
+as well as a set of machine learning and deep learning models by using tensorflow to make predictions. 
