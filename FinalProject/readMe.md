@@ -8,8 +8,11 @@ In order to run the program, you need to get all the packages listed in the code
 
 All the modules needed:
 import numpy as np
+
 from scipy import stats
+
 import pandas as pd
+
 import matplotlib.pyplot as plt
 get_ipython().run_line_magic('matplotlib', 'inline')
 import plotly
