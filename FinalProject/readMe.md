@@ -1,5 +1,6 @@
 This is the folder for Zhicheng (Jason) Xue and Shiwen (GiGi) Wang's final project for X433.7 machine learning with TensorFlow.
 
+The data used for this project can be downloaded from https://www.kaggle.com/wendykan/lending-club-loan-data. The name is loan.csv. Due to its size greater than 25 MB, we could not upload to GitHub. We will include the zipped data file with the email in case you find it hard to download the data file from the website.
 
 Please note that Part V in the code is the section where you can find our TensorFlow models while the other codes are either data preparations, exploratory data analysis and scikit learn model.
 
